@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_header"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="48dp"
+        android:paddingBottom="24dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_icon_circle"
+                android:src="@drawable/ic_arrow_back"
+                android:tint="@color/white"
+                android:contentDescription="@string/cd_back" />
+            <TextView
+                android:id="@+id/tvScreenTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/TextHeader"
+                android:text="@string/add_med_title"
+                android:layout_weight="1"
+                android:layout_marginStart="14dp" />
+        </LinearLayout>
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:clipToPadding="false"
+        android:scrollbars="none"
+        android:overScrollMode="never">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="24dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextH2"
+                android:text="@string/sec_med_details"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="12dp" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilMedicineName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/AppInput"
+                android:hint="@string/hint_med_name"
+                android:layout_marginBottom="14dp"
+                app:startIconDrawable="@drawable/ic_pill">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etMedicineName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilDosage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/AppInput"
+                android:hint="@string/hint_dosage"
+                android:layout_marginBottom="14dp"
+                app:startIconDrawable="@drawable/ic_edit">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etDosage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextCaption"
+                android:text="@string/lbl_form"
+                android:layout_marginBottom="6dp" />
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroupForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:singleSelection="true"
+                app:singleLine="false"
+                app:chipSpacingHorizontal="8dp"
+                app:chipSpacingVertical="4dp"
+                app:selectionRequired="true">
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipTablet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/AppChip"
+                    android:text="@string/form_tablet"
+                    android:checkable="true"
+                    android:checked="true" />
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipCapsule"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/AppChip"
+                    android:text="@string/form_capsule"
+                    android:checkable="true" />
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipSyrup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/AppChip"
+                    android:text="@string/form_syrup"
+                    android:checkable="true" />
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipInjection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/AppChip"
+                    android:text="@string/form_injection"
+                    android:checkable="true" />
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipDrops"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/AppChip"
+                    android:text="@string/form_drops"
+                    android:checkable="true" />
+            </com.google.android.material.chip.ChipGroup>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextH2"
+                android:text="@string/sec_schedule"
+                android:layout_marginTop="28dp"
+                android:layout_marginBottom="12dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextCaption"
+                android:text="@string/lbl_when"
+                android:layout_marginBottom="6dp" />
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroupWhen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:singleSelection="false"
+                app:singleLine="false"
+                app:chipSpacingHorizontal="8dp"
+                app:chipSpacingVertical="4dp">
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipMorning"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/AppChip"
+                    android:text="@string/when_morning"
+                    android:checkable="true"
+                    android:checked="true" />
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipAfternoon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/AppChip"
+                    android:text="@string/when_afternoon"
+                    android:checkable="true" />
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipEvening"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/AppChip"
+                    android:text="@string/when_evening"
+                    android:checkable="true" />
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipNight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/AppChip"
+                    android:text="@string/when_night"
+                    android:checkable="true" />
+            </com.google.android.material.chip.ChipGroup>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextCaption"
+                android:text="@string/lbl_food"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="6dp" />
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroupFood"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:singleSelection="true"
+                app:singleLine="false"
+                app:chipSpacingHorizontal="8dp"
+                app:chipSpacingVertical="4dp"
+                app:selectionRequired="true">
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipBefore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/AppChip"
+                    android:text="@string/food_before"
+                    android:checkable="true" />
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipAfter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/AppChip"
+                    android:text="@string/food_after"
+                    android:checkable="true"
+                    android:checked="true" />
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipWith"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/AppChip"
+                    android:text="@string/food_with"
+                    android:checkable="true" />
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipAnytime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/AppChip"
+                    android:text="@string/food_any"
+                    android:checkable="true" />
+            </com.google.android.material.chip.ChipGroup>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilDuration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/AppInput"
+                android:hint="@string/hint_duration"
+                android:layout_marginBottom="14dp"
+                app:startIconDrawable="@drawable/ic_calendar">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etDuration"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilStock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/AppInput"
+                android:hint="@string/hint_stock"
+                android:layout_marginBottom="14dp"
+                app:startIconDrawable="@drawable/ic_refresh">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etStock"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/TextH2"
+                android:text="@string/sec_notes"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="12dp" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilNotes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/AppInput"
+                android:hint="@string/hint_notes"
+                android:layout_marginBottom="0dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etNotes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine|textCapSentences"
+                    android:minLines="3"
+                    android:gravity="top|start" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/surface"
+        android:elevation="12dp"
+        android:padding="16dp">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/AppButtonOutlined"
+            android:text="@string/btn_cancel"
+            android:layout_weight="1" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNext"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/AppButton"
+            android:text="@string/btn_next"
+            android:layout_weight="2"
+            android:layout_marginStart="12dp" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="top"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground">
+    <TextView
+        android:id="@+id/tvDoseTime"
+        android:layout_width="64dp"
+        android:layout_height="wrap_content"
+        style="@style/TextBodyStrong" />
+    <FrameLayout
+        android:layout_width="24dp"
+        android:layout_height="match_parent">
+        <View
+            android:id="@+id/railLine"
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="14dp"
+            android:background="@color/outline" />
+        <View
+            android:id="@+id/railDot"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_gravity="top|center_horizontal"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/bg_dot_ring" />
+    </FrameLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_marginStart="10dp"
+        android:paddingBottom="22dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <TextView
+                android:id="@+id/tvDoseName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/TextBodyStrong"
+                android:layout_weight="1" />
+            <TextView
+                android:id="@+id/tvDoseStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_status_gray"
+                android:textColor="@color/status_gray_text"
+                android:textSize="12sp"
+                android:fontFamily="sans-serif-medium"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tvDoseSub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextCaption"
+            android:layout_marginTop="2dp" />
+    </LinearLayout>
+</LinearLayout>
